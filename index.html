@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Let the Mute Witnesses Speak</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <meta name="description" content="A list of temples, stupas or sacred places destroyed or occupied by Islamic/Christian forces in the Indian subcontinent">
+  <meta name="author" content="Sarthak Ganguly!">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+    		<div class="col-md-12">
+    			<div class="jumbotron">
+    				<h2>Let the Mute Witnesses Speak</h2><br>
+    				<p>
+    					The list of all temples, stupas and monuments that were destroyed is mentioned herein.
+              Some of them may be replaced by masjids, some may remain in various stages of ruin while some may
+              even be reclaimed by the Dharmic community. In case the authenticity of a particular claim in the list
+              below is considered questionable, it is marked as such. The references for each of these monuments will
+              be provided soon.
+    				</p>
+    			</div>
+    		</div>
+    	</div>
+  <div class="row" style="width:100%;padding:3% 3% 3% 6%;">
+    <div class="row postlist">
+
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script type='text/javascript'>
+    var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1clakCW5TxaIAEhr7qujT5x3j3Sf7uGRiL-a4zjou4-I/edit?usp=sharing';
+
+    function init() {
+      Tabletop.init( { key: publicSpreadsheetUrl,
+                       callback: showInfo,
+                       simpleSheet: true } )
+    }
+    var counter = 1;
+    function showInfo(data, tabletop) {
+
+            for(var i=0;i<data.length; i++){
+              $('.postlist').append('<div class="col-md-4"><h4>'
+                +data[i].name+'</h4><img class="img-thumbnail" style="height:200px;" alt="'+data[i].name+'" src="'+data[i].imagesrc+'"</img><p style="text-align: justify; text-justify: inter-word;">' + data[i].summary + '</p><p><a class="btn btn-outline-info href="#">View details</a></p></div>');
+                if (counter == 3){
+
+                }
+            }
+
+      //alert('Successfully processed!')
+      console.log(data);
+    }
+
+    window.addEventListener('DOMContentLoaded', init)
+  </script>
+
+</body>
+
+</html>
