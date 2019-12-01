@@ -6,7 +6,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <meta name="description" content="A list of temples, stupas or sacred places destroyed or occupied by Islamic/Christian forces in the Indian subcontinent">
-  <meta name="author" content="Sarthak Ganguly!">
+  <meta name="author" content="Sarthak Ganguly">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
 
             for(var i=0;i<data.length; i++){
               $('.postlist').append('<div class="col-md-4"><h4>'
-                +data[i].name+'</h4><img class="img-thumbnail" style="height:200px;" alt="'+data[i].name+'" src="'+data[i].imagesrc+'"</img><p style="text-align: justify; text-justify: inter-word;">' + data[i].summary + '</p><p><a class="btn btn-outline-info href="#">View details</a></p></div>');
+                +data[i].name+'</h4><img class="img-thumbnail" style="height:200px;" alt="'+data[i].name+'" src="'+data[i].imagesrc+'"</img><p style="text-align: justify; text-justify: inter-word;">' + data[i].summary + '</p><span>Status</span><p><a class="btn btn-outline-info href="#">View details</a></p></div>');
                 if (counter == 3){
 
                 }
