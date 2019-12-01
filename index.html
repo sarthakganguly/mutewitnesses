@@ -27,7 +27,7 @@
     		</div>
     	</div>
   <div class="row" style="width:100%;padding:3% 3% 3% 6%;">
-    <div class="row postlist">
+    <div class="row postlist" style="font-size: 0.9rem;">
 
     </div>
   </div>
@@ -49,7 +49,7 @@
 
             for(var i=0;i<data.length; i++){
               $('.postlist').append('<div class="col-md-4"><h4>'
-                +data[i].name+'</h4><img class="img-thumbnail" style="height:200px;" alt="'+data[i].name+'" src="'+data[i].imagesrc+'"</img><p style="text-align: justify; text-justify: inter-word;">' + data[i].summary + '</p><span>Status: '+ data[i].status + '</span><p><a class="btn btn-outline-info href="#">View details</a></p></div>');
+                +data[i].name+'</h4><img class="img-thumbnail" style="height:200px;" alt="'+data[i].name+'" src="'+data[i].imagesrc+'"</img><p style="text-align: justify; text-justify: inter-word;">' + data[i].summary + '</p><p><b>Status:</b> '+ data[i].status + '</p><p><b>Built Date: </b> '+ data[i].builtdate + '</p><p><b>Destroyed Date: </b> '+ data[i].destroyeddate + '</p><p><b>Destroyed by: </b> '+ data[i].destroyedby + '</p><p><a class="btn btn-outline-info href="#">View details</a></p></div>');
                 if (counter == 3){
 
                 }
